@@ -25,6 +25,8 @@ theme:
         name: Switch to dark mode
       primary: teal
       accent: purple
+  extra_css:
+    - css/style.css
 
 markdown_extensions:
   - pymdownx.highlight:
