@@ -60,3 +60,12 @@ copyright:
 
 plugins:
   - search
+
+nav:
+  - Home: index.md
+  - Results: results.md
+  - Documentation:
+      - BLS: bls.md
+      - Implementation: implementation.md
+  - Contributing: contributing.md
+  - Attributions: attributions.md
