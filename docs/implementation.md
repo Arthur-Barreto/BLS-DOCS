@@ -56,47 +56,139 @@ typedef std::tuple<double, double, double> SPECParameters;
 
 ### Detailed Function Descriptions
 
----
-
 #### `min_value`
 
 ```c
 template <typename T> T min_value(const std::vector<T> &v);
 ```
 
-- **Description**  
+**Description**  
 Get the minimum element in a vector.
 
-- **Parameters:**  
-    - **`T`** Type of the elements in the vector.
-    - **`v`** The vector from which to get the minimum value
+**Parameters:**  
 
-- **Returns:**  
+- **`T`** Type of the elements in the vector.
+- **`v`** The vector from which to get the minimum value
+
+**Returns:**  
   The minimum element in the vector.
+
+---
+
+#### `max_value`
 
 ```c
 template <typename T> T max_value(const std::vector<T> &v);
 ```
 
+**Description**
+Get the maximum element in a vector.
+
+**Parameters:**  
+
+- **`T`** Type of the elements in the vector.
+- **`v`** The vector from which to get the maximum value
+
+**Returns:**
+  The maximum element in the vector.
+
+---
+
+#### `ptp`
+
 ```c
 template <typename T> T ptp(const std::vector<T> &v);
 ```
+
+**Description**
+Get the peak-to-peak value in a vector, which is the difference between the maximum and minimum values.
+
+**Parameters:**  
+
+- **`T`** Type of the elements in the vector.
+- **`v`** The vector from which to get the peak-to-peak value
+
+**Returns:**
+  The peak-to-peak value in the vector.
+
+---
+
+#### arange
 
 ```c
 std::vector<double> arange(double start, double end, double step);
 ```
 
+**Description**
+Generates a range of values from `start` to `end` with a given step size. It's similar to the `numpy.arange` function in Python.
+
+**Parameters:**  
+
+- **`start`** The starting value of the range.
+- **`end`** The ending value of the range, not inclusive.
+- **`step`** The step size between values.
+
+**Returns:**
+  A vector of values from `start` to `end` with a step size of `step`.
+
+---
+
+#### linspace
+
 ```c
 std::vector<double> linspace(double start, double end, size_t num);
 ```
+
+**Description**
+Generates a linearly spaced range of values from `start` to `end` with a given number of elements. It's similar to the `numpy.linspace` function in Python.
+
+**Parameters:**
+
+- **`start`** The starting value of the range.
+- **`end`** The ending value of the range.
+- **`num`** The number of elements in the range.
+
+**Returns:**
+  A vector of `num` values from `start` to `end`.
+
+---
+
+#### auto_phase
 
 ```c
 std::vector<double> auto_phase(double period, double duration);
 ```
 
+**Description**
+Generates a vector os phases for a given period and duration. It's the cpp version of the `auto_phase` function from `astropy`.
+
+**Parameters:**
+
+- **`period`** The period of the signal.
+- **`duration`** The duration of the signal.
+
+**Returns:**
+  A vector of phases.
+
+---
+
+#### auto_max_min_period
+
 ```c
 PERIODParameters auto_max_min_period(std::vector<double> &time);
 ```
+
+**Description**
+Generates the maximum and minimum period for a given time vector. It's the cpp version of the `auto_max_min_period` function from `astropy`.
+
+**Parameters:**
+
+- **`time`** The time vector.
+
+**Returns:**
+  A `PERIODParameters` struct with the minimum period, maximum period, and total duration of the time vector (it's the `ptp` of the time vector).
+
+---
 
 ```c
 std::vector<double> auto_period(double minimum_period = -1,
