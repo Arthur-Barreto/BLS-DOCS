@@ -26,9 +26,9 @@ If you're interested in contributing to this project, please visit the [contribu
 This project makes use of the following open-source projects:
 
 - **lightkurve**: A friendly package for Kepler & TESS time series analysis in Python.
-  - License: [MIT License](https://github.com/lightkurve/lightkurve?tab=MIT-1-ov-file)
+  - License: [MIT License](https://opensource.org/license/mit)
   - Source: [GitHub Repository](https://github.com/lightkurve/lightkurve.git)
 
-- **Another Project Name**: Brief description.
-  - License: [Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)
-  - Source: [Official Website](https://projectwebsite.com)
+- **Astropy**: A comprehensive library for astronomy-related computations and data manipulation, providing tools for working with astronomical data and performing complex calculations.
+  - License: [BSD-3-Clause License](https://opensource.org/licenses/BSD-3-Clause)
+  - Source: [GitHub Repository](https://github.com/astropy/astropy)
